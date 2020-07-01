@@ -54,7 +54,7 @@ public class AutoInvoice {
 		Product product3_1 = new Product("flacons de parfum importé", ProductType.DEFAULT,27.99d,true);
 		Product product3_2 = new Product("flacon de parfum", ProductType.DEFAULT,18.99d,false);
 		Product product3_3 = new Product("boîtes de pilules contre la migraine", ProductType.DRUG,9.75d,false);
-		Product product3_4 = new Product("boîtes de chocolats importés", ProductType.DEFAULT,11.25d,true);
+		Product product3_4 = new Product("boîtes de chocolats importés", ProductType.FOOD,11.25d,true);
 		
 		Invoice invoice3 = new Invoice();
 		invoice3.addToCart(product3_1, 2);
