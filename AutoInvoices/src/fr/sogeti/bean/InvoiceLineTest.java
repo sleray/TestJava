@@ -28,6 +28,15 @@ class InvoiceLineTest {
 		assertEquals( 1.05d,il.roundTaxAmount(1.02d));
 		
 	}
+	
+	@Test
+	void testRealUseCaseTaxes() {
+		//Test different Taxes patterns
+		Product books = new Product("livres",ProductType.BOOK,12.49d,false);
+		InvoiceLine il = new InvoiceLine(books,2);
+		assertEquals(27.48,il.getTotalWithTaxes());
+		assertEquals(2.5d,il.getTaxes());
+	}
 	@Test
 	void testSingleProductsSimpleTaxes() {
 		//Test different Taxes patterns

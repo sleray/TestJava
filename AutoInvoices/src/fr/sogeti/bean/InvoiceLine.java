@@ -70,8 +70,8 @@ public class InvoiceLine {
 		double taxPercent = this.product.getProductType().getTaxPercent() + (this.product.isImported() ? 0.05d : 0d);
 		double taxAmount = this.product.getBasePrice() * taxPercent *this.getNumberOfProduct();
 		
-		//round the result to 2 digits to get rid of Double precision
-		return roundTaxAmount(Math.round(taxAmount*100)/100);
+		//round the result to 4 digits to get rid of Double precision
+		return roundTaxAmount(Math.round(taxAmount*10000)/10000d);
 		
 	}
 	public String getFormattedTotalWithTaxes() {
