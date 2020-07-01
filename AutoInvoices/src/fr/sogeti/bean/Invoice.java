@@ -60,7 +60,7 @@ public class Invoice {
 		  sb.append("€ : ");
 		  sb.append(invoiceLine.getFormattedTotalWithTaxes());
 		  sb.append("€ TTC");
-		  System.out.println(sb.toString() +"=> "+invoiceLine.getTaxes());
+		  System.out.println(sb.toString());
 		}
 		System.out.println("");
 		System.out.println("Montant des taxes : "+this.formattedTotalTaxes()+"€");
